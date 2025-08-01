@@ -62,7 +62,7 @@ body {
     width: 8rem;
     height: 8rem;
     border-radius: 7px;
-    border: 2px;
+    border: 2px solid #ffffff;
     background-position: center top;
     background-size: 100%;
 }
@@ -70,6 +70,6 @@ body {
 .final-score {
     background-color: #000000;
     color: #ffffff;
-    border: 2px;
+    border: 2px solid #ffffff;
     border-radius: 7px;
 }
