@@ -11,3 +11,35 @@ body {
     background-color: #000000;
     color: #ffffff;
 }
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: max-content;
+    margin: auto;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.text {
+    font-size: 28px;
+}
+
