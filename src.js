@@ -55,3 +55,39 @@ function playRound (player, computer) {
         }
 }
 
+function disableButtons (state) {
+  buttons.forEach(button => {
+    button.disabled = state;
+  })
+}
+
+function finalResult () {
+  
+  if (playerScore === 5) {
+    resultBoard.textContent = "You won the game!";
+    disableButtons(true);
+    reset();
+  } else if (computerScore === 5) {
+    resultBoard.textContent = "You lost the game!";
+    disableButtons(true);
+    reset();
+  }
+  
+}
+
+function reset () {
+  const resetBtn = document.createElement("button");
+  resetBtn.classList.add("button-reset");
+  resetBtn.textContent = "Play Again!";
+  resultBoard.appendChild(resetBtn);
+
+  resetBtn.addEventListener ('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+    finalscore.textContent = "";
+    scoreboardComp.textContent = "";
+    scoreboardPlayer.textContent = "";
+    disableButtons(false);
+    resetBtn.remove();
+  })
+}
