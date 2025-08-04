@@ -84,7 +84,7 @@ body {
     gap: 1rem;
 }
 
-.scoreboard-computer, .scoreboard-player {
+.score-computer, .score-player {
     
     display: flex;
     flex-direction: column;
