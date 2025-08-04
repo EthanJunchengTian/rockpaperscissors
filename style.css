@@ -91,9 +91,10 @@ body {
     align-items: center;
     width: 100%;
     height: 8rem;
-    padding: 0.5rem;
+    padding: 1rem;
     border: 2px solid #ffffff;
     border-radius: 7px;
+    
 }
 
 .final-score {
