@@ -82,15 +82,16 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+}
+
+.scoreboard-computer, .scoreboard-player {
+    
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 8rem;
     padding: 0.5rem;
-}
-
-.scoreboard-computer, .scoreboard-player {
-    padding: 1rem;
 }
 
 .final-score {
