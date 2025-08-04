@@ -1,6 +1,7 @@
 const scoreboardPlayer = document.querySelector('.scoreboard-player')
 const scoreboardComp = document.querySelector('.scoreboard-computer')
 const finalscore = document.querySelector('.final-score')
+const containerResult = document.querySelector('.container-result')
 
 const buttons = document.querySelectorAll('button');
 
@@ -40,7 +41,7 @@ function playRound (player, computer) {
             (computer === "scissors" && player === "rock")
         ) {
             playerScore++;
-            resultBoard.innerHTML = `You Won!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
+            finalscore.innerHTML = `You Won!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
             scoreboardPlayer.textContent = playerScore;
         } else if (
             (computer === "rock" && player === "scissors") ||
@@ -48,10 +49,10 @@ function playRound (player, computer) {
             (computer === "scissors" && player === "paper")
         ) {
             computerScore++;
-            resultBoard.innerHTML = `You Lost!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
+            finalscore.innerHTML = `You Lost!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
             scoreboardComp.textContent = computerScore;
         } else {
-            resultBoard.innerHTML = `It's A Draw!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
+            finalscore.innerHTML = `It's A Draw!<br>Player choice: ${player}<br>Computer choice: ${computer}`;
         }
 }
 
@@ -64,11 +65,11 @@ function disableButtons (state) {
 function finalResult () {
   
   if (playerScore === 5) {
-    resultBoard.textContent = "You won the game!";
+    finalscore.textContent = "You won the game!";
     disableButtons(true);
     reset();
   } else if (computerScore === 5) {
-    resultBoard.textContent = "You lost the game!";
+    finalscore.textContent = "You lost the game!";
     disableButtons(true);
     reset();
   }
@@ -79,7 +80,7 @@ function reset () {
   const resetBtn = document.createElement("button");
   resetBtn.classList.add("button-reset");
   resetBtn.textContent = "Play Again!";
-  resultBoard.appendChild(resetBtn);
+  finalscore.appendChild(resetBtn);
 
   resetBtn.addEventListener ('click', () => {
     playerScore = 0;
